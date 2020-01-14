@@ -1,0 +1,66 @@
+.Statistics {
+  display: grid;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  grid-template-columns: auto 1fr auto;
+
+  .Center {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .Peak {
+      background: rgba(255, 246, 234, 0.18);
+      padding: 0 10px;
+      white-space: nowrap;
+    }
+
+    .Name {
+      cursor: pointer;
+    }
+
+    .Countdown {
+      font-size: 3rem;
+    }
+
+    .Humanize {
+      font-size: 1rem;
+    }
+  }
+
+  .Left {
+    flex: 0;
+    font-size: 1rem;
+    transform: rotate(-90deg);
+    opacity: 0.5;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  .Right {
+    flex: 0;
+    font-size: 1rem;
+    transform: rotate(90deg);
+    opacity: 0.5;
+    color: black;
+    text-transform: uppercase;
+  }
+}
+
+.Backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
