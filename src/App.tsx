@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './App.scss';
 import ProgressBar from "./components/ProgressBar/ProgressBar";
+import Snowfall from 'react-snowfall'
 import Statistics from "./components/Statistics/Statistics";
 import moment from "moment";
 
@@ -10,7 +11,8 @@ const App: React.FC = () => {
 
   const today = moment();
   const birthday = moment('14th Oct 1993', "Do MMM YYYY");
-  const peak_depression = birthday.clone().add(46, 'years').add(73, 'days');
+  // https://nypost.com/2020/01/13/study-finds-when-middle-age-misery-hits-the-hardest/
+  const peak_depression = birthday.clone().add(47, 'years').add(73, 'days');
 
   const journey = peak_depression.diff(birthday, 'seconds');
   const alive = today.diff(birthday, 'seconds');
@@ -39,6 +41,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+			<Snowfall  />
       <ProgressBar progress={progress} />
       <Statistics birthday={birthday.format('Do MMM YYYY')}
                   peak_depression={peak_depression.format('Do MMM YYYY')}
