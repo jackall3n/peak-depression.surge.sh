@@ -11,6 +11,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "cross-env": "^6.0.3",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
@@ -24,9 +25,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "boomer": "yarn build && surge ./build peak-depression-of-a-boomer.surge.sh",
-    "bloomer": "yarn build && surge ./build peak-depression-of-a-bloomer.surge.sh",
-    "zoomer": "yarn build && surge ./build peak-depression-of-a-zoomer.surge.sh"
+    "boomer": "cross-env REACT_APP_OOMER=boomer yarn build && surge ./build peak-depression-of-a-boomer.surge.sh",
+    "bloomer": "cross-env REACT_APP_OOMER=bloomer yarn build && surge ./build peak-depression-of-a-bloomer.surge.sh",
+    "zoomer": "cross-env REACT_APP_OOMER=zoomer yarn build && surge ./build peak-depression-of-a-zoomer.surge.sh",
+    "deploy": "yarn boomer && yarn bloomer && yarn zoomer"
   },
   "eslintConfig": {
     "extends": "react-app"

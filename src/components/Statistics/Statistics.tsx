@@ -3,15 +3,7 @@ import moment from 'moment';
 
 import './Statistics.scss';
 
-const names = [
-  'Jack',
-  'Zoomer',
-  'Muscles Boy',
-  'TheVegan™️',
-  '🍆'
-];
-
-const Statistics = ({ birthday, peak_depression, until }: { birthday: string, peak_depression: string, until: moment.Duration }) => {
+const Statistics = ({ names, birthday, peak_depression, until }: { names: string[], birthday: string, peak_depression: string, until: moment.Duration }) => {
   const [name, setName] = useState(0);
 
   const onClick = () => {
